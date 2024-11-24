@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/FIFO/AbstrFIFO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/FIFO/IAbstrFIFO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/AbstrLIFO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/IAbstrLIFO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/Obec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleListException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/IAbstrDoubleList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/IAbstrHeap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrTable/AbstrTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrTable/AbstrTableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrTable/IAbstrTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/enumy/eTypProhl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/prioritnifronta/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/prioritnifronta/abstrHeap/AbstrHeapTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2oqBq2FjvkDOmhiYvneLmu6GX7X" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.AbstrHeapTest.executor": "Run",
+    "JUnit.AbstrHeapTest.iterator001.executor": "Debug",
+    "JUnit.AbstrHeapTest.odeber001.executor": "Run",
+    "JUnit.AbstrHeapTest.test.executor": "Run",
+    "JUnit.AbstrHeapTest.test1.executor": "Run",
+    "JUnit.AbstrHeapTest.vloz001.executor": "Debug",
+    "JUnit.AbstrHeapTest.vloz002.executor": "Debug",
+    "JUnit.AbstrHeapTest.vloz003.executor": "Debug",
+    "JUnit.AbstrHeapTest.vloz004.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/admin/OneDrive - Univerzita Pardubice/Dokumenty/NetBeansProjects/prioritniFronta/src/main/java/com/example/prioritnifronta",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\OneDrive - Univerzita Pardubice\Dokumenty\NetBeansProjects\prioritniFronta\src\main\java\com\example\prioritnifronta" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.prioritnifronta.abstrHeap" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.AbstrHeapTest">
+    <configuration name="AbstrHeapTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="prioritniFronta" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.prioritnifronta.abstrHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.prioritnifronta.abstrHeap" />
+      <option name="MAIN_CLASS_NAME" value="com.example.prioritnifronta.abstrHeap.AbstrHeapTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstrHeapTest.iterator001" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="prioritniFronta" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.prioritnifronta.abstrHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.prioritnifronta.abstrHeap" />
+      <option name="MAIN_CLASS_NAME" value="com.example.prioritnifronta.abstrHeap.AbstrHeapTest" />
+      <option name="METHOD_NAME" value="iterator001" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstrHeapTest.odeber001" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="prioritniFronta" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.prioritnifronta.abstrHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.prioritnifronta.abstrHeap" />
+      <option name="MAIN_CLASS_NAME" value="com.example.prioritnifronta.abstrHeap.AbstrHeapTest" />
+      <option name="METHOD_NAME" value="odeber001" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstrHeapTest.vloz003" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="prioritniFronta" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.prioritnifronta.abstrHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.prioritnifronta.abstrHeap" />
+      <option name="MAIN_CLASS_NAME" value="com.example.prioritnifronta.abstrHeap.AbstrHeapTest" />
+      <option name="METHOD_NAME" value="vloz003" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstrHeapTest.vloz004" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="prioritniFronta" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.prioritnifronta.abstrHeap.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.prioritnifronta.abstrHeap" />
+      <option name="MAIN_CLASS_NAME" value="com.example.prioritnifronta.abstrHeap.AbstrHeapTest" />
+      <option name="METHOD_NAME" value="vloz004" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AbstrHeapTest" />
+        <item itemvalue="JUnit.AbstrHeapTest.iterator001" />
+        <item itemvalue="JUnit.AbstrHeapTest.odeber001" />
+        <item itemvalue="JUnit.AbstrHeapTest.vloz004" />
+        <item itemvalue="JUnit.AbstrHeapTest.vloz003" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="" />
+      <created>1731587415278</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731587415278</updated>
+      <workItem from="1731587416497" duration="2027000" />
+      <workItem from="1731870094520" duration="3356000" />
+      <workItem from="1731924605362" duration="1225000" />
+      <workItem from="1732007159551" duration="5355000" />
+      <workItem from="1732039080088" duration="66000" />
+      <workItem from="1732093924016" duration="245000" />
+      <workItem from="1732098422187" duration="127000" />
+      <workItem from="1732266813919" duration="6193000" />
+      <workItem from="1732293635919" duration="136000" />
+      <workItem from="1732465791139" duration="2153000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
