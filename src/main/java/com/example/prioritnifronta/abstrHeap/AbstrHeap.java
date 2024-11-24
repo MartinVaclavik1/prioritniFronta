@@ -22,21 +22,19 @@ public class AbstrHeap implements IAbstrHeap {
     }
 
     @Override
-    public void vybuduj(Obec[] obce) {
+    public void vybuduj(Obec[] obce) throws AbstrHeapException {
         //stup bude pole prvků?
-        if(obce.length == 0){
-            //TODO vlastni hlaska
-            throw new NoSuchElementException();
+        if (obce.length == 0) {
+            throw new AbstrHeapException("Pole obcí musí být delší, než 0 znaků");
         }
         zrus();
         for (Obec obec : obce) {
-            //TODO zjistit jak to z toho vytáhnout
-            vloz(obec.getPocetCelkem(), obec.getObec(), obec);
+            vloz(obec);
         }
     }
 
     @Override
-    public void reorganizace() {
+    public void reorganizace() throws AbstrHeapException {
         jeVybranyPocet = !jeVybranyPocet;
         Iterator<Obec> it = vytvorIterator();
         Obec[] poleObci = new Obec[pocet];
@@ -53,6 +51,8 @@ public class AbstrHeap implements IAbstrHeap {
     @Override
     public void zrus() {
         pole = new ArrayList<>();
+        pole.add(0, null);
+        pocet = 0;
     }
 
     @Override
@@ -62,13 +62,12 @@ public class AbstrHeap implements IAbstrHeap {
 
     //do pole prvků se vloží na další volný místo prvek -
     @Override
-    public void vloz(int pocetObcanu, String nazev, Obec prvek) {
-        if (pocetObcanu < 0 || nazev == null || prvek == null) {
-            //TODO dodělat hlášku
-            throw new NoSuchElementException();
+    public void vloz(Obec prvek) throws AbstrHeapException {
+        if (prvek == null || prvek.getPocetCelkem() < 0 || prvek.getObec() == null) {
+            throw new AbstrHeapException("Neplatné vstupní hodnoty");
         }
 
-        pole.add(startIndex + pocet++, new Prvek(pocetObcanu, nazev, prvek));
+        pole.add(startIndex + pocet++, new Prvek(prvek.getPocetCelkem(), prvek.getObec(), prvek));
 
         porovnejSPredkem(pocet); //index 2, index predka 1
     }
@@ -159,7 +158,7 @@ public class AbstrHeap implements IAbstrHeap {
     }
 
     @Override
-    public Obec odeberMax() {
+    public Obec odeberMax() throws AbstrHeapException {
         if (!jePrazdny()) {
             Obec prvek = pole.get(startIndex).value;
             pole.set(startIndex, pole.remove(pocet));
@@ -168,19 +167,17 @@ public class AbstrHeap implements IAbstrHeap {
             zkontrolujDolu(startIndex);
             return prvek;
         } else {
-            //TODO udělat vlastní chybovou hlášku
-            throw new NoSuchElementException("nelze odebrat z pole - prázdné pole");
+            throw new AbstrHeapException("nelze odebrat z pole - prázdné pole");
         }
     }
 
     @Override
-    public Obec zpristupniMax() {
+    public Obec zpristupniMax() throws AbstrHeapException {
 
         if (!jePrazdny()) {
             return pole.get(startIndex).value;
         } else {
-            //TODO udělat vlastní chybovou hlášku
-            throw new NoSuchElementException("nelze odebrat z pole - prázdné pole");
+            throw new AbstrHeapException("nelze zpřístupnit z pole - prázdné pole");
         }
     }
 
@@ -199,7 +196,6 @@ public class AbstrHeap implements IAbstrHeap {
                 if (hasNext()) {
                     return pole.get(startIndex + vypsany++).value;
                 } else {
-                    //TODO dodělat chybovou hlášku
                     throw new NoSuchElementException();
                 }
             }
