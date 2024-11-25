@@ -32,7 +32,7 @@ public class ProgAbstrHeap extends Application {
     private IAbstrHeap prioritniFronta = new AbstrHeap();
     private final Pane pane = new Pane();
     private final ChoiceBox<eTypProhl> choiceBox = new ChoiceBox<>();
-
+    private final Label typRazeni = new Label("Typ řazení: počet obyvatel");
 
     public static void main(String[] args) {
         launch(args);
@@ -71,6 +71,7 @@ public class ProgAbstrHeap extends Application {
         vBox.getChildren().add(newButton("zruš", zrus()));
 //        vBox.getChildren().add(newButton("aktualizuj", aktualizuj()));
         vBox.getChildren().add(choiceBox);
+        vBox.getChildren().add(typRazeni);
 
         Scene scene = new Scene(root);
         stage.setTitle("Václavík - AbstrTable");
@@ -95,6 +96,13 @@ public class ProgAbstrHeap extends Application {
         return EventHandler -> {
             try {
                 prioritniFronta.reorganizace();
+
+                if (typRazeni.getText().equals("Typ řazení: počet obyvatel")) {
+                    typRazeni.setText("Typ řazení: název obce");
+                } else {
+                    typRazeni.setText("Typ řazení: počet obyvatel");
+                }
+
             } catch (AbstrHeapException x) {
                 chybovaHlaska(x.getMessage());
             }

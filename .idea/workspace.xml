@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="Dodělání UI">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/AbstrLIFO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/IAbstrLIFO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleListException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/IAbstrDoubleList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/eTypProhl.java" afterDir="false" />
+    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="Finalizace UI + přidání možností iterátoru">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/UI/ProgAbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/UI/ProgAbstrHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/IAbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/IAbstrHeap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -195,7 +190,7 @@
       <workItem from="1732293635919" duration="136000" />
       <workItem from="1732465791139" duration="5183000" />
       <workItem from="1732491123071" duration="172000" />
-      <workItem from="1732564553663" duration="1731000" />
+      <workItem from="1732564553663" duration="2282000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -213,7 +208,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732479151201</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finalizace UI + přidání možností iterátoru">
+      <option name="closed" value="true" />
+      <created>1732566319307</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1732566319307</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +225,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="Dodělání UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dodělání UI" />
+    <MESSAGE value="Finalizace UI + přidání možností iterátoru" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finalizace UI + přidání možností iterátoru" />
   </component>
 </project>
