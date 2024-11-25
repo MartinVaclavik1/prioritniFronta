@@ -1,5 +1,7 @@
 package com.example.prioritnifronta.abstrHeap;
 
+import com.example.prioritnifronta.LIFO.AbstrLIFO;
+import com.example.prioritnifronta.LIFO.IAbstrLIFO;
 import com.example.prioritnifronta.Obec;
 
 import java.util.ArrayList;
@@ -36,7 +38,7 @@ public class AbstrHeap implements IAbstrHeap {
     @Override
     public void reorganizace() throws AbstrHeapException {
         jeVybranyPocet = !jeVybranyPocet;
-        Iterator<Obec> it = vytvorIterator();
+        Iterator<Obec> it = vytvorIterator(eTypProhl.DO_SIRKY);
         Obec[] poleObci = new Obec[pocet];
 
         if (pocet > 0) {
@@ -182,9 +184,11 @@ public class AbstrHeap implements IAbstrHeap {
     }
 
     @Override
-    public Iterator<Obec> vytvorIterator() {
+    public Iterator<Obec> vytvorIterator(eTypProhl typ) {
         return new Iterator<>() {
             int vypsany = 0;
+            IAbstrLIFO<Integer> lifo = new AbstrLIFO<>();
+            boolean prvniPruchod = true;
 
             @Override
             public boolean hasNext() {
@@ -194,7 +198,29 @@ public class AbstrHeap implements IAbstrHeap {
             @Override
             public Obec next() {
                 if (hasNext()) {
-                    return pole.get(startIndex + vypsany++).value;
+                    if (prvniPruchod) {
+                        prvniPruchod = false;
+                        lifo.vloz(startIndex);
+                    }
+                    switch (typ) {
+                        case DO_SIRKY -> {
+                            return pole.get(startIndex + vypsany++).value;
+                        }
+                        case DO_HLOUBKY -> {
+                            int odebranyPrvek = lifo.odeber();
+
+                            if (odebranyPrvek * 2 + 1 <= pocet) {
+                                lifo.vloz(odebranyPrvek * 2 + 1);
+                            }
+                            if (odebranyPrvek * 2 <= pocet) {
+                                lifo.vloz(odebranyPrvek * 2);
+                            }
+                            vypsany++;
+                            return pole.get(odebranyPrvek).value;
+                        }
+                    }
+                    return null;
+
                 } else {
                     throw new NoSuchElementException();
                 }

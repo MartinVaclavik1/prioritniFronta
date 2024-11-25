@@ -4,25 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/UI/ProgAbstrHeap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/UI/Run.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeapException.java" afterDir="false" />
+    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="Dodělání UI">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/AbstrLIFO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/IAbstrLIFO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleListException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/IAbstrDoubleList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/eTypProhl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/FIFO/AbstrFIFO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/FIFO/IAbstrFIFO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/AbstrLIFO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/LIFO/IAbstrLIFO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/AbstrDoubleListException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrDoubleList/IAbstrDoubleList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/UI/ProgAbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/UI/ProgAbstrHeap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/IAbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/IAbstrHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrTable/AbstrTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrTable/AbstrTableException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrTable/IAbstrTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/enumy/eTypProhl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +27,7 @@
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -57,34 +50,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Run.executor": "Run",
-    "JUnit.AbstrHeapTest.executor": "Run",
-    "JUnit.AbstrHeapTest.iterator001.executor": "Debug",
-    "JUnit.AbstrHeapTest.odeber001.executor": "Run",
-    "JUnit.AbstrHeapTest.test.executor": "Run",
-    "JUnit.AbstrHeapTest.test1.executor": "Run",
-    "JUnit.AbstrHeapTest.vloz001.executor": "Debug",
-    "JUnit.AbstrHeapTest.vloz002.executor": "Debug",
-    "JUnit.AbstrHeapTest.vloz003.executor": "Debug",
-    "JUnit.AbstrHeapTest.vloz004.executor": "Debug",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/admin/OneDrive - Univerzita Pardubice/Dokumenty/NetBeansProjects/prioritniFronta/src/main/java/com/example/prioritnifronta",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AbstrHeapTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AbstrHeapTest.iterator001.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.AbstrHeapTest.odeber001.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AbstrHeapTest.test.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AbstrHeapTest.test1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AbstrHeapTest.vloz001.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.AbstrHeapTest.vloz002.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.AbstrHeapTest.vloz003.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.AbstrHeapTest.vloz004.executor&quot;: &quot;Debug&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/OneDrive - Univerzita Pardubice/Dokumenty/NetBeansProjects/prioritniFronta/src/main/java/com/example/prioritnifronta&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\OneDrive - Univerzita Pardubice\Dokumenty\NetBeansProjects\prioritniFronta\src\main\java\com\example\prioritnifronta" />
@@ -200,7 +193,9 @@
       <workItem from="1732098422187" duration="127000" />
       <workItem from="1732266813919" duration="6193000" />
       <workItem from="1732293635919" duration="136000" />
-      <workItem from="1732465791139" duration="5141000" />
+      <workItem from="1732465791139" duration="5183000" />
+      <workItem from="1732491123071" duration="172000" />
+      <workItem from="1732564553663" duration="1731000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -210,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732468141215</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Dodělání UI">
+      <option name="closed" value="true" />
+      <created>1732479151201</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1732479151201</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +221,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="Dodělání UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dodělání UI" />
   </component>
 </project>

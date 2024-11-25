@@ -4,6 +4,7 @@ import com.example.prioritnifronta.Obec;
 import com.example.prioritnifronta.abstrHeap.AbstrHeap;
 import com.example.prioritnifronta.abstrHeap.AbstrHeapException;
 import com.example.prioritnifronta.abstrHeap.IAbstrHeap;
+import com.example.prioritnifronta.abstrHeap.eTypProhl;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,6 +31,8 @@ public class ProgAbstrHeap extends Application {
     private final String nazevSouboru = "zaloha.bin";
     private IAbstrHeap prioritniFronta = new AbstrHeap();
     private final Pane pane = new Pane();
+    private final ChoiceBox<eTypProhl> choiceBox = new ChoiceBox<>();
+
 
     public static void main(String[] args) {
         launch(args);
@@ -37,6 +40,17 @@ public class ProgAbstrHeap extends Application {
 
     @Override
     public void start(Stage stage) {
+
+        choiceBox.getItems().addAll(eTypProhl.DO_HLOUBKY, eTypProhl.DO_SIRKY);
+        choiceBox.setPrefWidth(150);
+        choiceBox.getSelectionModel().selectFirst();
+
+        choiceBox.setOnAction(actionEvent -> {
+            if (choiceBox.getSelectionModel().getSelectedItem() != null) {
+                aktualizujListView();
+            }
+        });
+
         pane.setPrefSize(1500, 700);
         listView.setFocusTraversable(false);
         BorderPane root = new BorderPane();
@@ -55,7 +69,9 @@ public class ProgAbstrHeap extends Application {
         vBox.getChildren().add(newButton("odeber max", odeberMax()));
         vBox.getChildren().add(newButton("reorganizace", reorganizace()));
         vBox.getChildren().add(newButton("zruš", zrus()));
-        vBox.getChildren().add(newButton("aktualizuj", aktualizuj()));
+//        vBox.getChildren().add(newButton("aktualizuj", aktualizuj()));
+        vBox.getChildren().add(choiceBox);
+
         Scene scene = new Scene(root);
         stage.setTitle("Václavík - AbstrTable");
         stage.setScene(scene);
@@ -64,9 +80,9 @@ public class ProgAbstrHeap extends Application {
         stage.show();
     }
 
-    private EventHandler<ActionEvent> aktualizuj() {
-        return EventHandler -> aktualizujListView();
-    }
+//    private EventHandler<ActionEvent> aktualizuj() {
+//        return EventHandler -> aktualizujListView();
+//    }
 
     private EventHandler<ActionEvent> zrus() {
         return EventHandler -> {
@@ -181,7 +197,7 @@ public class ProgAbstrHeap extends Application {
                         new ObjectOutputStream(
                                 new FileOutputStream(nazevSouboru));
 
-                Iterator<Obec> it = prioritniFronta.vytvorIterator();
+                Iterator<Obec> it = prioritniFronta.vytvorIterator(eTypProhl.DO_SIRKY);
 
                 while (it.hasNext()) {
                     vystup.writeInt(1);
@@ -264,7 +280,7 @@ public class ProgAbstrHeap extends Application {
 
         observableList.clear();
 
-        Iterator<Obec> iterator = prioritniFronta.vytvorIterator();
+        Iterator<Obec> iterator = prioritniFronta.vytvorIterator(choiceBox.getValue());
         while (iterator.hasNext()) {
             observableList.addAll(iterator.next().toString());
         }

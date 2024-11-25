@@ -19,5 +19,5 @@ public interface IAbstrHeap {
 
     Obec zpristupniMax() throws AbstrHeapException;//: - zpřístupnění prvku z prioritní fronty s maximální prioritou,
 
-    Iterator<Obec> vytvorIterator();//: - vypíše prvky prioritní fronty (využívá iterátor do šířky i do hloubky).
+    Iterator<Obec> vytvorIterator(eTypProhl typ);//: - vypíše prvky prioritní fronty (využívá iterátor do šířky i do hloubky).
 }
