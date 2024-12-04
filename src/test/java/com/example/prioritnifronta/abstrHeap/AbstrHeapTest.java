@@ -28,14 +28,14 @@ class AbstrHeapTest {
 
     @Test
     void vloz001() throws AbstrHeapException {
-        IAbstrHeap prioritniFronta = new AbstrHeap();
+        IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
         prioritniFronta.vloz(T1);
         prioritniFronta.vloz(T2);
     }
 
     @Test
     void vloz002() throws AbstrHeapException {
-        IAbstrHeap prioritniFronta = new AbstrHeap();
+        IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
         prioritniFronta.vloz(T2);
         prioritniFronta.vloz(T1);
         prioritniFronta.vloz(T5);
@@ -44,7 +44,7 @@ class AbstrHeapTest {
 
     @Test
     void vloz003() throws AbstrHeapException {
-        IAbstrHeap prioritniFronta = new AbstrHeap();
+        IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
         prioritniFronta.vloz(T2);
         prioritniFronta.vloz(T1);
         prioritniFronta.vloz(T3);
@@ -53,7 +53,7 @@ class AbstrHeapTest {
 
     @Test
     void vloz004() throws AbstrHeapException {
-        IAbstrHeap prioritniFronta = new AbstrHeap();
+        IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
         prioritniFronta.reorganizace();
         prioritniFronta.vloz(T2);
         prioritniFronta.vloz(T1);
@@ -63,7 +63,7 @@ class AbstrHeapTest {
 
     @Test
     void vloz005() throws AbstrHeapException {
-        IAbstrHeap prioritniFronta = new AbstrHeap();
+        IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
         prioritniFronta.reorganizace();
         prioritniFronta.vloz(T2);
         prioritniFronta.vloz(T1);
@@ -73,7 +73,7 @@ class AbstrHeapTest {
 
     @Test
     void odeber001() throws AbstrHeapException {
-        IAbstrHeap prioritniFronta = new AbstrHeap();
+        IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
         prioritniFronta.reorganizace();
         prioritniFronta.vloz(T2);
         prioritniFronta.vloz(T1);
@@ -84,7 +84,7 @@ class AbstrHeapTest {
 
     @Test
     void iterator001() throws AbstrHeapException {
-        IAbstrHeap prioritniFronta = new AbstrHeap();
+        IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
         prioritniFronta.reorganizace();
         prioritniFronta.vloz(T2);
         prioritniFronta.vloz(T1);
