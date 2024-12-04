@@ -1,7 +1,5 @@
 package com.example.prioritnifronta.abstrHeap;
 
-import com.example.prioritnifronta.Obec;
-
 import java.util.Iterator;
 import java.util.List;
 

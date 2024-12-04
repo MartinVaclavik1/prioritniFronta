@@ -67,7 +67,6 @@ public class AbstrHeap<O extends Comparable<O>> implements IAbstrHeap<O> {
     }
 
     private void porovnejSPredkem(int indexPotomka) {
-        //TODO podle priority nastavit < nebo > u compareTo?
         int indexPredka = indexPotomka / 2;
         if (indexPotomka > pocet || indexPredka > pocet || indexPredka < startIndex) {
             return;
