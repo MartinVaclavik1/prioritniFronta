@@ -2,18 +2,13 @@ package com.example.prioritnifronta.abstrHeap;
 
 import com.example.prioritnifronta.LIFO.AbstrLIFO;
 import com.example.prioritnifronta.LIFO.IAbstrLIFO;
-import com.example.prioritnifronta.Obec;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
+import java.util.*;
 
-public class AbstrHeap implements IAbstrHeap {
+public class AbstrHeap<O extends Comparable<O>> implements IAbstrHeap<O> {
 
-    private List<Obec> pole = new ArrayList<>();
+    private List<O> pole = new ArrayList<>();
     private int pocet = 0;
-    private boolean jeVybranyPocet = true;
     private final int startIndex = 1;
 
     public AbstrHeap() {
@@ -21,29 +16,29 @@ public class AbstrHeap implements IAbstrHeap {
     }
 
     @Override
-    public void vybuduj(Obec[] obce) throws AbstrHeapException {
+    public void vybuduj(List <O> obce) throws AbstrHeapException {
         //stup bude pole prvků?
-        if (obce.length == 0) {
+        if (obce.isEmpty()) {
             throw new AbstrHeapException("Pole obcí musí být delší, než 0 znaků");
         }
         zrus();
-        for (Obec obec : obce) {
-            vloz(obec);
+        for(int i = 1; i < obce.size(); i++){
+            vloz(obce.get(i));
         }
     }
 
     @Override
     public void reorganizace() throws AbstrHeapException {
-        jeVybranyPocet = !jeVybranyPocet;
-        Iterator<Obec> it = vytvorIterator(eTypProhl.DO_SIRKY);
-        Obec[] poleObci = new Obec[pocet];
+
+        List<O> listObci = new ArrayList<>();
+        listObci.add(0, null);
 
         if (pocet > 0) {
-            for (int i = 0; i < pocet; i++) {
-                poleObci[i] = it.next();
+            for (int i = 1; i < pole.size(); i++) {
+                listObci.add(i, pole.get(i));
             }
 
-            vybuduj(poleObci);
+            vybuduj(listObci);
         }
     }
 
@@ -61,12 +56,12 @@ public class AbstrHeap implements IAbstrHeap {
 
     //do pole prvků se vloží na další volný místo prvek -
     @Override
-    public void vloz(Obec prvek) throws AbstrHeapException {
-        if (prvek == null || prvek.getPocetCelkem() < 0 || prvek.getObec() == null) {
+    public void vloz(O obec) throws AbstrHeapException {
+        if (obec == null) {
             throw new AbstrHeapException("Neplatné vstupní hodnoty");
         }
 
-        pole.add(startIndex + pocet++, prvek);
+        pole.add(startIndex + pocet++, obec);
 
         porovnejSPredkem(pocet); //index 2, index predka 1
     }
@@ -78,8 +73,7 @@ public class AbstrHeap implements IAbstrHeap {
             return;
         }
 
-        if (jeVybranyPocet && pole.get(indexPotomka).getPocetCelkem() > pole.get(indexPredka).getPocetCelkem() ||
-                !jeVybranyPocet && pole.get(indexPotomka).getObec().compareTo(pole.get(indexPredka).getObec()) > 0) {
+        if (pole.get(indexPotomka).compareTo(pole.get(indexPredka)) > 0) {
             //prohodí potomka a předka
             prohod(indexPredka, indexPotomka);
 
@@ -94,7 +88,7 @@ public class AbstrHeap implements IAbstrHeap {
     }
 
     private void prohod(int indexPredka, int indexPotomka) {
-        Obec pomocna = pole.get(indexPredka);
+        O pomocna = pole.get(indexPredka);
         pole.set(indexPredka, pole.get(indexPotomka));
         pole.set(indexPotomka, pomocna);
     }
@@ -105,61 +99,36 @@ public class AbstrHeap implements IAbstrHeap {
 
         //když je indexL a indexR v poli, tak se zjistí větší z nich a porovná se s předkem
         if (indexPotomkaL <= pocet && indexPotomkaR <= pocet) {
-            if (jeVybranyPocet) {
+
                 //jestli indexL je větší
-                int porovnani = Integer.compare(pole.get(indexPotomkaL).getPocetCelkem(), pole.get(indexPotomkaR).getPocetCelkem());
+                int porovnani = pole.get(indexPotomkaL).compareTo(pole.get(indexPotomkaR));
                 if (porovnani > 0) {
-                    if (pole.get(indexPotomkaL).getPocetCelkem() > pole.get(indexRodice).getPocetCelkem()) {
+                    if (pole.get(indexPotomkaL).compareTo(pole.get(indexRodice)) > 0) {
                         prohod(indexPotomkaL, indexRodice);
                         porovnejSPredkem(indexRodice);
                         zkontrolujDolu(indexPotomkaL);
                     }
                 } else if (porovnani < 0) {
-                    if (pole.get(indexPotomkaR).getPocetCelkem() > pole.get(indexRodice).getPocetCelkem()) {
+                    if (pole.get(indexPotomkaR).compareTo(pole.get(indexRodice))>0) {
                         prohod(indexPotomkaR, indexRodice);
                         porovnejSPredkem(indexRodice);
                         zkontrolujDolu(indexPotomkaR);
                     }
                 }
-            } else {
-                int porovnani = pole.get(indexPotomkaL).getObec().compareTo(pole.get(indexPotomkaR).getObec());
-                if (porovnani > 0) {
-                    if (pole.get(indexPotomkaL).getObec().compareTo(pole.get(indexRodice).getObec()) > 0) {
-                        prohod(indexPotomkaL, indexRodice);
-                        porovnejSPredkem(indexRodice);
-                        zkontrolujDolu(indexPotomkaL);
-                    }
-                } else if (porovnani < 0) {
-                    if (pole.get(indexPotomkaR).getObec().compareTo(pole.get(indexRodice).getObec()) > 0) {
-                        prohod(indexPotomkaR, indexRodice);
-                        porovnejSPredkem(indexRodice);
-                        zkontrolujDolu(indexPotomkaR);
-                    }
-                }
-            }
             //když je jen indexL v poli, tak se porovná s předkem
         } else if (indexPotomkaL <= pocet) {
-            if (jeVybranyPocet) {
-                if (pole.get(indexPotomkaL).getPocetCelkem() > pole.get(indexRodice).getPocetCelkem()) {
+                if (pole.get(indexPotomkaL).compareTo(pole.get(indexRodice))>0) {
                     prohod(indexPotomkaL, indexRodice);
                     porovnejSPredkem(indexRodice);
                     zkontrolujDolu(indexPotomkaL);
                 }
-
-            } else {
-                if (pole.get(indexPotomkaL).getObec().compareTo(pole.get(indexRodice).getObec()) > 0) {
-                    prohod(indexPotomkaL, indexRodice);
-                    porovnejSPredkem(indexRodice);
-                    zkontrolujDolu(indexPotomkaL);
-                }
-            }
         }
     }
 
     @Override
-    public Obec odeberMax() throws AbstrHeapException {
+    public O odeberMax() throws AbstrHeapException {
         if (!jePrazdny()) {
-            Obec prvek = pole.get(startIndex);
+            O prvek = pole.get(startIndex);
             pole.set(startIndex, pole.remove(pocet));
             pocet--;
 
@@ -171,7 +140,7 @@ public class AbstrHeap implements IAbstrHeap {
     }
 
     @Override
-    public Obec zpristupniMax() throws AbstrHeapException {
+    public O zpristupniMax() throws AbstrHeapException {
 
         if (!jePrazdny()) {
             return pole.get(startIndex);
@@ -181,7 +150,7 @@ public class AbstrHeap implements IAbstrHeap {
     }
 
     @Override
-    public Iterator<Obec> vytvorIterator(eTypProhl typ) {
+    public Iterator<O> vytvorIterator(eTypProhl typ) {
         return new Iterator<>() {
             private int vypsany = 0;
             private final IAbstrLIFO<Integer> lifo = new AbstrLIFO<>();
@@ -193,7 +162,7 @@ public class AbstrHeap implements IAbstrHeap {
             }
 
             @Override
-            public Obec next() {
+            public O next() {
                 if (hasNext()) {
                     if (prvniPruchod) {
                         prvniPruchod = false;

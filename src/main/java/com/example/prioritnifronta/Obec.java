@@ -1,13 +1,16 @@
 package com.example.prioritnifronta;
 
+import com.example.prioritnifronta.UI.eTypPorovnani;
+
 import java.io.Serializable;
 
-public class Obec implements Serializable {
+public class Obec implements Serializable, Comparable<Obec>{
     private final int psc;
     private final String obec;
     private int pocetMuzu;
     private int pocetZen;
     private int pocetCelkem;
+    private static boolean jePrioritaNaPocet = true;
 
     public Obec(int psc, String obec, int pocetMuzu, int pocetZen) {
         this.psc = psc;
@@ -58,5 +61,18 @@ public class Obec implements Serializable {
         sb.append(", počet celkem = ").append(pocetCelkem);
         sb.append('}');
         return sb.toString();
+    }
+
+    public static void zmenPrioritu(){
+        jePrioritaNaPocet = !jePrioritaNaPocet;
+    }
+
+    @Override
+    public int compareTo(Obec o) {
+        if(jePrioritaNaPocet){
+        return Integer.compare(this.getPocetCelkem(), o.getPocetCelkem());
+        }else {
+            return this.obec.compareTo(o.obec);
+        }
     }
 }

@@ -29,7 +29,7 @@ public class ProgAbstrHeap extends Application {
     private final ObservableList<String> observableList = FXCollections.observableArrayList();
     private final ListView<String> listView = new ListView<>(observableList);
     private final String nazevSouboru = "zaloha.bin";
-    private IAbstrHeap prioritniFronta = new AbstrHeap();
+    private IAbstrHeap<Obec> prioritniFronta = new AbstrHeap<>();
     private final Pane pane = new Pane();
     private final ChoiceBox<eTypProhl> choiceBox = new ChoiceBox<>();
     private final Label typRazeni = new Label("Typ řazení: počet obyvatel");
@@ -81,9 +81,7 @@ public class ProgAbstrHeap extends Application {
         stage.show();
     }
 
-//    private EventHandler<ActionEvent> aktualizuj() {
-//        return EventHandler -> aktualizujListView();
-//    }
+
 
     private EventHandler<ActionEvent> zrus() {
         return EventHandler -> {
@@ -95,6 +93,7 @@ public class ProgAbstrHeap extends Application {
     private EventHandler<ActionEvent> reorganizace() {
         return EventHandler -> {
             try {
+                Obec.zmenPrioritu();
                 prioritniFronta.reorganizace();
 
                 if (typRazeni.getText().equals("Typ řazení: počet obyvatel")) {
@@ -172,7 +171,7 @@ public class ProgAbstrHeap extends Application {
                                 new FileInputStream(nazevSouboru));
 
                 //TODO mazat zbytek pole, nebo nechat a přičíst? - pro nechání smazat následující řádek
-                prioritniFronta = new AbstrHeap();
+                prioritniFronta = new AbstrHeap<>();
 
                 int konec = vstup.readInt();
 
