@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="kosmetické úpravy">
+    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="upravení vybuduj, aby nevkládalo po prvku, ale aby budovalo tak, jak má">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/prioritnifronta/abstrHeap/AbstrHeapTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/prioritnifronta/abstrHeap/AbstrHeapTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,34 +48,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Run.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AbstrHeapTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AbstrHeapTest.iterator001.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.AbstrHeapTest.odeber001.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AbstrHeapTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AbstrHeapTest.test1.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.AbstrHeapTest.vloz001.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.AbstrHeapTest.vloz002.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.AbstrHeapTest.vloz003.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.AbstrHeapTest.vloz004.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/admin/OneDrive - Univerzita Pardubice/Dokumenty/NetBeansProjects/prioritniFronta/src/main/java/com/example/prioritnifronta&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Run.executor": "Run",
+    "JUnit.AbstrHeapTest.executor": "Run",
+    "JUnit.AbstrHeapTest.iterator001.executor": "Debug",
+    "JUnit.AbstrHeapTest.odeber001.executor": "Run",
+    "JUnit.AbstrHeapTest.test.executor": "Run",
+    "JUnit.AbstrHeapTest.test1.executor": "Run",
+    "JUnit.AbstrHeapTest.vloz001.executor": "Debug",
+    "JUnit.AbstrHeapTest.vloz002.executor": "Debug",
+    "JUnit.AbstrHeapTest.vloz003.executor": "Debug",
+    "JUnit.AbstrHeapTest.vloz004.executor": "Debug",
+    "JUnit.AbstrHeapTest.vloz006.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/admin/OneDrive - Univerzita Pardubice/Dokumenty/NetBeansProjects/prioritniFronta/src/main/java/com/example/prioritnifronta",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\admin\OneDrive - Univerzita Pardubice\Dokumenty\NetBeansProjects\prioritniFronta\src\main\java\com\example\prioritnifronta" />
@@ -87,7 +88,7 @@
       <recent name="com.example.prioritnifronta.abstrHeap" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Run">
+  <component name="RunManager" selected="JUnit.AbstrHeapTest.vloz006">
     <configuration name="Run" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.prioritnifronta.UI.Run" />
       <module name="prioritniFronta" />
@@ -148,7 +149,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AbstrHeapTest.vloz004" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AbstrHeapTest.vloz006" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="prioritniFronta" />
       <extension name="coverage">
         <pattern>
@@ -158,7 +159,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.prioritnifronta.abstrHeap" />
       <option name="MAIN_CLASS_NAME" value="com.example.prioritnifronta.abstrHeap.AbstrHeapTest" />
-      <option name="METHOD_NAME" value="vloz004" />
+      <option name="METHOD_NAME" value="vloz006" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -166,11 +167,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AbstrHeapTest.vloz006" />
         <item itemvalue="Application.Run" />
         <item itemvalue="JUnit.AbstrHeapTest" />
         <item itemvalue="JUnit.AbstrHeapTest.iterator001" />
         <item itemvalue="JUnit.AbstrHeapTest.odeber001" />
-        <item itemvalue="JUnit.AbstrHeapTest.vloz004" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +198,8 @@
       <workItem from="1732626181294" duration="84000" />
       <workItem from="1732708275843" duration="171000" />
       <workItem from="1733327961197" duration="7474000" />
-      <workItem from="1733930670952" duration="2347000" />
+      <workItem from="1733930670952" duration="2677000" />
+      <workItem from="1733939352689" duration="2815000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -263,7 +265,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733337356602</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="upravení vybuduj, aby nevkládalo po prvku, ale aby budovalo tak, jak má">
+      <option name="closed" value="true" />
+      <created>1733935696434</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733935696434</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +299,8 @@
     <MESSAGE value="přidání comparatoru do obce a odstranění všech přímích volání Obce v AbstrHeap a nahrazeno generickým voláním O" />
     <MESSAGE value="ipravení testů pro generalizaci abstrHeap" />
     <MESSAGE value="kosmetické úpravy" />
-    <option name="LAST_COMMIT_MESSAGE" value="kosmetické úpravy" />
+    <MESSAGE value="upravení vybuduj, aby nevkládalo po prvku, ale aby budovalo tak, jak má" />
+    <option name="LAST_COMMIT_MESSAGE" value="upravení vybuduj, aby nevkládalo po prvku, ale aby budovalo tak, jak má" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
