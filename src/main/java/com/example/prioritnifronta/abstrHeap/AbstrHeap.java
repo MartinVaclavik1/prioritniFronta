@@ -21,25 +21,20 @@ public class AbstrHeap<O extends Comparable<O>> implements IAbstrHeap<O> {
         if (obce.isEmpty()) {
             throw new AbstrHeapException("Pole obcí musí být delší, než 0 znaků");
         }
-        zrus();
-        for(int i = 1; i < obce.size(); i++){
-            vloz(obce.get(i));
+//        zrus();
+//        for(int i = 1; i < obce.size(); i++){
+//            vloz(obce.get(i));
+//        }
+        pole = obce;
+        pocet = pole.size() - 1;
+        for(int i = pocet/2; i > 0; i--){
+            zkontrolujDolu(i);
         }
     }
 
     @Override
     public void reorganizace() throws AbstrHeapException {
-
-        List<O> listObci = new ArrayList<>();
-        listObci.add(0, null);
-
-        if (pocet > 0) {
-            for (int i = 1; i < pole.size(); i++) {
-                listObci.add(i, pole.get(i));
-            }
-
-            vybuduj(listObci);
-        }
+        vybuduj(pole);
     }
 
     @Override
@@ -81,7 +76,7 @@ public class AbstrHeap<O extends Comparable<O>> implements IAbstrHeap<O> {
                 porovnejSPredkem(indexPredka);
             }
 
-            zkontrolujDolu(indexPotomka);
+//            zkontrolujDolu(indexPotomka);
         }
 
     }
@@ -104,13 +99,13 @@ public class AbstrHeap<O extends Comparable<O>> implements IAbstrHeap<O> {
                 if (porovnani > 0) {
                     if (pole.get(indexPotomkaL).compareTo(pole.get(indexRodice)) > 0) {
                         prohod(indexPotomkaL, indexRodice);
-                        porovnejSPredkem(indexRodice);
+//                        porovnejSPredkem(indexRodice);
                         zkontrolujDolu(indexPotomkaL);
                     }
                 } else if (porovnani < 0) {
                     if (pole.get(indexPotomkaR).compareTo(pole.get(indexRodice))>0) {
                         prohod(indexPotomkaR, indexRodice);
-                        porovnejSPredkem(indexRodice);
+//                        porovnejSPredkem(indexRodice);
                         zkontrolujDolu(indexPotomkaR);
                     }
                 }
@@ -118,7 +113,7 @@ public class AbstrHeap<O extends Comparable<O>> implements IAbstrHeap<O> {
         } else if (indexPotomkaL <= pocet) {
                 if (pole.get(indexPotomkaL).compareTo(pole.get(indexRodice))>0) {
                     prohod(indexPotomkaL, indexRodice);
-                    porovnejSPredkem(indexRodice);
+//                    porovnejSPredkem(indexRodice);
                     zkontrolujDolu(indexPotomkaL);
                 }
         }

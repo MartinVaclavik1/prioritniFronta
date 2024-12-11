@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="ipravení testů pro generalizaci abstrHeap">
+    <list default="true" id="1cf44219-fb8e-4adb-bec6-0ec691b6c5ff" name="Changes" comment="kosmetické úpravy">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/Obec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/Obec.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/UI/eTypPorovnani.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/AbstrHeap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/IAbstrHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/prioritnifronta/abstrHeap/IAbstrHeap.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +196,8 @@
       <workItem from="1732564553663" duration="3345000" />
       <workItem from="1732626181294" duration="84000" />
       <workItem from="1732708275843" duration="171000" />
-      <workItem from="1733327961197" duration="7125000" />
+      <workItem from="1733327961197" duration="7474000" />
+      <workItem from="1733930670952" duration="2347000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <option name="closed" value="true" />
@@ -257,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733336742844</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="kosmetické úpravy">
+      <option name="closed" value="true" />
+      <created>1733337356602</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733337356602</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +288,8 @@
     <MESSAGE value="smazání nepotřebné třídy prvek + opravení testů pro vyhazování chyb a nastavení typu iterátoru" />
     <MESSAGE value="přidání comparatoru do obce a odstranění všech přímích volání Obce v AbstrHeap a nahrazeno generickým voláním O" />
     <MESSAGE value="ipravení testů pro generalizaci abstrHeap" />
-    <option name="LAST_COMMIT_MESSAGE" value="ipravení testů pro generalizaci abstrHeap" />
+    <MESSAGE value="kosmetické úpravy" />
+    <option name="LAST_COMMIT_MESSAGE" value="kosmetické úpravy" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
